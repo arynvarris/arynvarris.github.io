@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Class Navigation Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/*Makes a vertical flex container that is the full height of the browser window, which allows you to push the footer down*/
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #c2c2c2;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the topnav */
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+}
+
+/* Style links in topnav */
+ul.topnav li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+ul.topnav li a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+
+/*Adding the one pushes the footer down to the bottom of the page*/
+div.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+/*Splits container in half 50/50*/
+div.flex-container > div {
+  width: 50%;
+  padding: 20px;
+  margin-top: 0%;
+}
+
+/* Style the footer */
+footer {
+  background-color: #f1f1f1;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Use media query and show the flex items vertically if screen width is less than 600px */
+@media screen and (max-width:600px) {
+  div.flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<!--End of styling CSS, start of body or page -->
+
+<body>
+<header>
+  <h1>CSC209 Class Navigation Page</h1>
+  <b><p>Web Programming with Prof. Ileana Streinu</p></b>
+</header>
+
+<ul class="topnav">
+  <!-- Horizontal Navbar Using Float -->
+  <li><a href="Tutorials/tutorials.html">Tutorials</a></li>
+  <li><a href="Hw0/Part1/index.html">Github Pages</a></li>
+  <li><a href="Hw1/hwOneHome.html">Homework 1</a></li>
+  <li><a href="Hw2/hwTwoHome.html">Homework 2 </a></li>
+  <li><a href="#contact">Homework 3</a></li>
+  <li><a href="#about">Homework 4</a></li>
+</ul>
+
+<div class="flex-container">
+  <div>
+    <h2>Class Content</h2>
+      <ul>
+        <li>Weekly homework is due <i>Mondays by 11:59 PM.</i></li>
+        <br>
+        <li>Homework topics are introduced <i>Tuesday</i> and full assignments are posted <i>Thursday</i>.</li>
+        <br>
+        <li><b>TA Hours with Alexandra:</b> <i>Sundays 9am-11am at Ford 242.</i></li>
+        <br>
+        <li>The midterm is a mini-project completed in class.</li>
+        <br>
+        <li>The final is a project plus an in-person interview</li>
+        <br>
+        <li><b>Grading:</b> Homework/Participation 30%, Midterm 30%, Final Project + Interview 40%.</li>
+      </ul> 
+  </div>
+
+  <div>
+    <h2>Notes.</h2>
+      <ul>
+
+      </ul> 
+  </div>
+</div>
+
+
+<footer>
+  <p>Aryn Villar Harris</p>
+</footer>
+
+</body>
+
+</html>

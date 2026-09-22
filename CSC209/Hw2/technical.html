@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Movie Schedule</title>
+
+<!-- Connects the page to the first CSS style file -->
+<link id="stylesheet" rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+
+<header>
+  <!-- Makes it so that each CSS style shows a different title -->
+    <h1 class="day-title">The Daytime Theater</h1>
+    <h1 class="night-title">The Midnight Theater</h1>
+
+  <!-- Shows and hides the free ticket message -->
+    <button type="button" id="readButton" onclick="showReadMe()">
+        Read Me
+    </button>
+
+  <!-- Hidden message -->
+    <i><p id="ticket" style="display:none;">
+        You get a free movie ticket!
+    </p></i>
+</header>
+
+
+<div class="container">
+
+<!-- Left side of the page -->
+<nav>
+
+  <div class="logo">
+    <br>
+    <b>Welcome!</b>
+  </div>
+
+  <p class="catchphrase">
+    Movie premiering <i>tonight</i>!
+  </p>
+
+  <hr>
+
+  <!-- local pages in folder -->
+  <a href="hwTwoHome.html">Back to Home</a>
+  <a href="creative.html">Creative Exercise</a>
+  <a href="technical.html">Movie Schedule</a>
+
+  <hr>
+
+    <p class="now-showing">
+        <b>Now Showing</b>
+    </p>
+
+  <p>
+    <ul>
+        <li>Spider-Man</li>
+        <li>The Odyssey</li>
+        <li>Avatar: Fire and Ash</li>
+        <li>Obsession</li>
+        <li>Dune</li>
+    </ul>
+  </p>
+
+  <hr>
+
+
+  <p>
+    <!-- Ppopcorn image -->
+    <img src="images/popcorn.jpg" alt="Popcorn" width="255">
+  </p>
+
+  <hr>
+
+</nav>
+
+
+<!-- Table containing movie schedules -->
+<main>
+  <h2>Upcoming Movie Schedule</h2>
+
+  <table>
+
+    <tr>
+      <th>Movie</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Price</th>
+    </tr>
+
+
+    <tr>
+      <!-- movies/ is inside the movies folder -->
+      <td><a href="movies/spiderMan.html">Spider-Man</a></td>
+
+      <td>Sept. 25</td>
+      <td>6:30 PM</td>
+      <td>$12.00</td>
+    </tr>
+
+
+    <tr>
+      <td><a href="movies/odyssey.html">The Odyssey</a></td>
+
+      <td>Sept. 26</td>
+      <td>7:00 PM</td>
+      <td>$14.00</td>
+    </tr>
+
+
+    <tr>
+        <td><a href="movies/avatar.html">Avatar: Fire and Ash</a></td>
+
+      <td>Sept. 27</td>
+      <td>8:00 PM</td>
+      <td>$15.00</td>
+    </tr>
+
+
+    <tr>
+      <td><a href="movies/obsession.html">Obsession</a></td>
+
+      <td>Sept. 28</td>
+      <td>6:00 PM</td>
+      <td>$11.00</td>
+    </tr>
+
+
+    <tr>
+      <td><a href="movies/dune.html">Dune</a></td>
+
+      <td>Sept. 29</td>
+      <td>7:30 PM</td>
+      <td>$13.00</td>
+    </tr>
+
+  </table>
+
+  <!-- Switches between the daytime and midnight CSS styling -->
+  <br>
+    <button type="button" id="styleButton" onclick="changeStyle()">
+    <img id="styleImage" src="images/sun.png" alt="Light Mode" width="40">
+    </button>
+
+</main>
+
+</div>
+
+
+<script>
+/* JavaScript for showing the ticket text if toggled, and changing Read Me into Hide */
+function showReadMe() {
+
+  var ticket = document.getElementById("ticket");
+  var button = document.getElementById("readButton");
+
+  if (ticket.style.display == "none") {
+    ticket.style.display = "block";
+    button.innerHTML = "Hide";
+  }else {
+    ticket.style.display = "none";
+    button.innerHTML = "Read Me";
+  }
+
+}
+
+
+/* Javascript that changes between the daytime and nightime CSS styling */
+function changeStyle() {
+
+  var style = document.getElementById("stylesheet");
+  var image = document.getElementById("styleImage");
+
+  /* If light mode is on, change to dark mode */
+  if (style.getAttribute("href") == "style1.css") {
+
+    style.setAttribute("href", "style2.css");
+
+    image.src = "images/moon.png";
+    image.alt = "Dark Mode";
+
+    /*Else, change to light mode */
+  }else {
+    style.setAttribute("href", "style1.css");
+
+    image.src = "images/sun.png";
+    image.alt = "Light Mode";
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>

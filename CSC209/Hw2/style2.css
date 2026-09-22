@@ -1,0 +1,107 @@
+/* Midnight Theatre CSS styling*/
+
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #24263b;
+    color: white;
+}
+
+/* Title area */
+header {
+    background-color: #09091f;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Puts the sidebar and movie table next to each other */
+.container {
+    display: flex;
+}
+
+/* Left side menu */
+nav {
+    width: 18%;
+    padding: 12px;
+    background-color: #333957;
+    min-height: 500px;
+}
+
+/* Puts each link on its own line */
+nav a {
+    display: block;
+    margin: 5px 0;
+    color: #fff890;
+}
+
+/* Horizontal lines */
+nav hr {
+    border: 0;
+    border-top: 1px solid #8f4444;
+    margin: 15px 0;
+}
+
+main {
+    width: 82%;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+table {
+    width: 100%;
+    /* Removes the double borders between table cells */
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #500b0b;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #8a3c3c;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Makes every other row a different color */
+tr:nth-child(odd) {
+    background-color: #34334e;
+}
+
+tr:nth-child(even) {
+    background-color: #484662;
+}
+
+/* Movie links color */
+td a {
+    color: #fff890;
+}
+
+.logo {
+    text-align: center;
+    font-size: 20px;
+}
+
+.catchphrase {
+    text-align: center;
+    font-size: 14px;
+}
+
+.now-showing {
+    text-align: center;
+}
+
+/* Shows the nighttime title and blocks the daytime title*/
+.day-title {
+    display: none;
+}
+
+.night-title {
+    display: block;
+}
