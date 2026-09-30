@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Movie Schedule</title>
+
+<!-- Connects the page to the first CSS style file -->
+<link id="stylesheet" rel="stylesheet" href="css/style1.css">
+
+</head>
+
+<body>
+
+<header>
+  <!-- Makes it so that each CSS style shows a different title -->
+    <h1 class="day-title">The Daytime Theater</h1>
+    <h1 class="night-title">The Midnight Theater</h1>
+
+  <!-- Shows and hides the free ticket message -->
+  <button type="button" id="readButton" onclick="showReadMe()">
+    Read Me
+  </button>
+
+  <!-- Hidden message -->
+  <i><p id="ticket" style="display:none;">
+    You get a free movie ticket!
+  </p></i>
+
+  <!-- Displays the date -->
+  <button type="button" onclick="showDate()">
+    Today's date is:
+  </button>
+
+  <!-- The date-->
+  <p id="todaysDate"></p>
+
+</header>
+
+
+<div class="container" id="pageContainer">
+<!-- Nav menu -->
+<nav>
+
+  <!-- Moves nav menu location -->
+  <button type="button" id="menuButton" onclick="changeMenuLocation()">
+    Move Menu Right
+  </button>
+
+  <div class="logo">
+    <br>
+    <b>Welcome!</b>
+  </div>
+
+  <p class="catchphrase">
+    Movie premiering <i>tonight</i>!
+  </p>
+
+  <hr>
+
+  <!-- local pages in folder -->
+  <a href="hwTwoHome.html">Back to Home</a>
+  <a href="creative.html">Creative Exercise</a>
+  <a href="technical.html">Movie Schedule</a>
+
+  <hr>
+
+  <!-- Shows/hides the resources onClick -->
+  <!-- showCredits refers to function in the script-->
+  <button type="button" id="resourceButton" onclick="showResources()">
+    Show Image Resources
+  </button>
+
+  <p>
+  <!-- Hidden resources -->
+  <div id="resources" style="display:none;">
+    <ul>
+      <li><a href="https://unsplash.com/photos/spider-man-leaning-on-concrete-brick-while-reading-book-o4c2zoVhjSw" target="_blank">Spiderman</a></li>
+      <li><a href="https://unsplash.com/photos/ancient-greek-vase-painting-depicts-mythological-scene-with-figures-HFJ5C1-PDpw" target="_blank">The Odyssey</a></li>
+      <li><a href="https://unsplash.com/photos/close-up-photo-of-fire-at-nighttime-7qjqQjt7zXQ" target="_blank">Avatar</a></li>
+      <li><a href="https://unsplash.com/photos/pink-and-white-flower-plant-L3fpHBSg8ms" target="_blank">Obsession</a></li>
+      <li><a href="https://unsplash.com/photos/rolling-sand-dunes-in-desert-landscape-pVr6wvUneMk" target="_blank">Dune</a></li>
+    </ul>
+  </div>
+  </p>
+
+  <hr>
+
+
+  <p>
+    <!-- Ppopcorn image -->
+    <img src="images/popcorn.jpg" alt="Popcorn" width="255">
+  </p>
+
+  <hr>
+
+</nav>
+
+
+<!-- Table displaying movie information -->
+<main>
+
+  <h2>Upcoming Movie Schedule</h2>
+
+  <table id="movieTable">
+
+    <tr>
+      <th>Movie</th>
+      <th>Image</th>
+      <th>Time</th>
+      <th>Price</th>
+      <th>Show/Hide</th>
+    </tr>
+
+    <tr>
+      <!-- movies/ is inside the movies folder -->
+      <td><a href="movies/spiderMan.html">Spider-Man</a></td>
+
+      <td>
+      <img id="spidermanImage"
+           src="Images/spiderman.avif"
+           alt="Spider-Man"
+           width="100">
+      </td>
+
+      <td>6:30 PM</td>
+      <td>$12.00</td>
+      <td>
+      <button type="button"
+              onclick="showHideImage('spidermanImage', this)">
+        Hide
+      </button>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="movies/odyssey.html">The Odyssey</a></td>
+
+      <td>
+      <img id="odysseyImage"
+           src="Images/odyssey.avif"
+           alt="The Odyssey"
+           width="100">
+      </td>
+      <td>7:00 PM</td>
+      <td>$14.00</td>
+
+      <td>
+      <button type="button"
+              onclick="showHideImage('odysseyImage', this)">
+        Hide
+      </button>
+      </td>
+    </tr>
+
+    <tr>
+        <td><a href="movies/avatar.html">Avatar: Fire and Ash</a></td>
+
+      <td>
+      <img id="avatarImage"
+           src="Images/avatar.avif"
+           alt="Avatar: Fire and Ash"
+           width="100">
+      </td>
+
+      <td>8:00 PM</td>
+      <td>$15.00</td>
+
+      <td>
+      <button type="button"
+              onclick="showHideImage('avatarImage', this)">
+        Hide
+      </button>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="movies/obsession.html">Obsession</a></td>
+
+      <td>
+      <img id="obsessionImage"
+           src="Images/obsession.avif"
+           alt="Obsession"
+           width="100">
+      </td>
+
+      <td>6:00 PM</td>
+      <td>$11.00</td>
+
+      <td>
+      <button type="button"
+              onclick="showHideImage('obsessionImage', this)">
+        Hide
+      </button>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="movies/dune.html">Dune</a></td>
+
+      <td>
+      <img id="duneImage"
+           src="Images/dune.avif"
+           alt="Dune"
+           width="100">
+      </td>
+
+      <td>7:30 PM</td>
+      <td>$13.00</td>
+
+      <td>
+      <button type="button"
+              onclick="showHideImage('duneImage', this)">
+        Hide
+      </button>
+      </td>
+    </tr>
+
+  </table>
+
+  <button type="button" id="tableButton" onclick="showTable()">
+    Hide Movie Schedule
+  </button>
+  <br>
+
+  <!-- Switches between the daytime and midnight CSS styling -->
+  <br>
+    <button type="button" id="styleButton" onclick="changeStyle()">
+    <img id="styleImage" src="images/sun.png" alt="Light Mode" width="40">
+    </button>
+
+</main>
+
+</div>
+
+<script src="js/technical.js"></script>
+
+</body>
+</html>

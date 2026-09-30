@@ -1,14 +1,15 @@
-/* Daytime Theatre CSS styling*/
+/* Midnight Theatre CSS styling*/
 
 body {
     margin: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #bec6db;
+    background-color: #24263b;
+    color: white;
 }
 
-/* Header area */
+/* Title area */
 header {
-    background-color: #14134f;
+    background-color: #09091f;
     color: white;
     text-align: center;
     padding: 12px;
@@ -23,7 +24,7 @@ header {
 nav {
     width: 18%;
     padding: 12px;
-    background-color: #8795ba;
+    background-color: #333957;
     min-height: 500px;
 }
 
@@ -31,13 +32,13 @@ nav {
 nav a {
     display: block;
     margin: 5px 0;
-    color: #14134f;
+    color: #fff890;
 }
 
-/* Changes the horizontal lines */
+/* Horizontal lines */
 nav hr {
     border: 0;
-    border-top: 1px solid #4f0d0d;
+    border-top: 1px solid #8f4444;
     margin: 15px 0;
 }
 
@@ -48,13 +49,12 @@ main {
 
 h2 {
     text-align: center;
-    color: #14134f;
+    color: white;
 }
 
 table {
     width: 100%;
-
-    /* Removes  double borders between table cells */
+    /* Removes the double borders between table cells */
     border-collapse: collapse;
 }
 
@@ -64,18 +64,23 @@ th {
 }
 
 th, td {
-    border: 1px solid #6b1414;
+    border: 1px solid #8a3c3c;
     padding: 8px;
     text-align: center;
 }
 
 /* Makes every other row a different color */
 tr:nth-child(odd) {
-    background-color: #fdf873;
+    background-color: #34334e;
 }
 
 tr:nth-child(even) {
-    background-color: #fbf2a4;
+    background-color: #484662;
+}
+
+/* Movie links color */
+td a {
+    color: #fff890;
 }
 
 .logo {
@@ -92,11 +97,25 @@ tr:nth-child(even) {
     text-align: center;
 }
 
-/* Shows the daytime title & blocks the midnight title*/
+/* Shows the nighttime title and blocks the daytime title*/
 .day-title {
-    display: block;
+    display: none;
 }
 
 .night-title {
-    display: none;
+    display: block;
+}
+
+#resourceButton {
+  background-color: #6b1414;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
+}
+
+#menuButton {
+  background-color: #6b1414;
+  color: #ffffff;
+  display: block;
+  margin: 0 auto;
 }
