@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Canvas</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        const NRPTS = 6; // Number of circles or points
+        const NREDGES = 5; // Number of edges
+    </script>
+
+    <script src="js/constants.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/graphics.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/helper.js"></script>
+
+</head>
+
+<body>
+
+    <h1>My Canvas</h1>
+    <p><b>Hardcoded graph settings:</b></p>
+
+    <div id="info"></div>
+
+    <br>
+
+    <button onclick="randomizeGraph(points, edges)">
+        Randomize Point Location
+    </button>
+
+    <br><br>
+
+    <button onclick="displayCoordinates(points, edges)">
+        Display Coordinates
+    </button>
+
+    <br><br>
+
+    <div id="coordinates"></div>
+    <canvas id="myCanvas" width="800" height="500">
+    </canvas>
+
+    <script>
+        // Gets the canvas
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        // Creates the points and edges
+        var points = new Points(NRPTS);
+        var edges = new Edges(points, NREDGES);
+
+        // Draws the points and edges on the canvas
+        drawEdges(edges);
+        drawPoints(points);
+
+        // Displays the number of points and edges to the canvas
+        displayInfo(points, edges);
+
+    </script>
+
+</body>
+
+</html>
