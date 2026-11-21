@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>DOM</h1>
+
+    <!-- Paragraph used for getElementById -->
+    <p id="demo"></p>
+
+    <!-- Paragraph used for changing style -->
+    <p id="color">Change my color</p>
+
+    <!-- Button used for onclick -->
+    <button id="button">Click Me</button>
+
+    <script>
+        
+        // Finds an HTML element by its id
+        const myPara = document.getElementById("demo");
+
+        // Changes the HTML inside the element
+        myPara.innerHTML = "Hello World!";
+
+        // Finds the paragraph with id="color"
+        const myColor = document.getElementById("color");
+
+        // Changes a CSS property
+        myColor.style.color = "red";
+
+        // Finds the button
+        const myButton = document.getElementById("button");
+
+        // Runs code when the button is clicked
+        myButton.onclick = function() {
+            myPara.innerHTML = "Button Clicked!";
+        };
+
+    </script>
+
+</body>
+
+</html>

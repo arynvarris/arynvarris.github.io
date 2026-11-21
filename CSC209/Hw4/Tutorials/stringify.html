@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JSON.stringify </title>
+</head>
+
+<body>
+
+    <h1>JSON.stringify() </h1>
+
+    <h2>Description</h2>
+
+    <p>
+        JSON.stringify() converts a JavaScript object or array
+        into a JSON string.
+    </p>
+
+    <p>
+        This is useful when you need to store or send JavaScript data
+        as text.
+    </p>
+
+    <h2>Object Example</h2>
+
+    <p>
+        This example converts an object into a JSON string.
+    </p>
+
+    <button onclick="showObject()">
+        Test Object
+    </button>
+
+    <p id="objectOutput"></p>
+
+    <h2>Array Example</h2>
+
+    <p>
+        JSON.stringify() can also convert an array into a string.
+    </p>
+
+    <button onclick="showArray()">
+        Test Array
+    </button>
+
+    <p id="arrayOutput"></p>
+
+    <script>
+
+        function showObject() {
+            let person = {name: "Aryn", age: 19};
+            let text = JSON.stringify(person);
+
+            document.getElementById("objectOutput").innerHTML = text;
+        }
+
+        function showArray() {
+            let colors = ["red", "blue", "green"];
+            let text = JSON.stringify(colors);
+
+            document.getElementById("arrayOutput").innerHTML = text;
+        }
+
+    </script>
+
+</body>
+
+</html>

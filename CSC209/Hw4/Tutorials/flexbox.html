@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox</title>
+
+    <style>
+        /* Makes this a flex container */
+        .container {
+            display: flex;
+        }
+
+        /* Puts items in a row */
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Puts items in a column */
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Allows items to move to a new line */
+        .wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Centers items horizontally */
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Centers items vertically */
+        .middle {
+            display: flex;
+            align-items: center;
+            height: 200px;
+        }
+
+        /* Simple flex item style */
+        .container div {
+            margin: 10px;
+            padding: 20px;
+            background-color: lightgray;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Flexbox</h1>
+
+    <!-- Flex container -->
+    <div class="container">
+
+        <!-- Flex items -->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+</body>
+
+</html>

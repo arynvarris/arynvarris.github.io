@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <h1>Functions, Classes, Loops, Arrays</h1>
+
+    <!-- Functions -->
+    <h2>Functions</h2>
+
+    <p id="functionDemo"></p>
+
+    <script>
+        // Creates a function
+        function myFunction(p1, p2) {
+            return p1 * p2;
+        }
+
+        // Calls the function
+        let result = myFunction(4, 3);
+
+        // Displays the result
+        document.getElementById("functionDemo").innerHTML = result;
+    </script>
+
+
+    <!-- Classes -->
+    <h2>Classes</h2>
+
+    <p id="classDemo"></p>
+
+    <script>
+        // Creates a class
+        class Car {
+
+            // Constructor creating the properties
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+
+        // Creates an object from the class
+        const myCar = new Car("Ford", 2014);
+
+        // Displays a property
+        document.getElementById("classDemo").innerHTML = myCar.name;
+    </script>
+
+
+    <!-- Loops -->
+    <h2>Loops</h2>
+
+    <p id="loopDemo"></p>
+
+    <script>
+        let text = "";
+
+        // Repeats the code 5 times
+        for (let i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+
+        // Displays the loop
+        document.getElementById("loopDemo").innerHTML = text;
+    </script>
+
+
+    <!-- Arrays -->
+    <h2>Arrays</h2>
+
+    <p id="arrayDemo"></p>
+
+    <script>
+        // Creates an array
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        // Gets the first item
+        let car = cars[0];
+
+        // Displays the first item
+        document.getElementById("arrayDemo").innerHTML = car;
+    </script>
+
+
+    <!-- Loop Through an Array -->
+    <h2>Loop Through an Array</h2>
+
+    <p id="arrayLoopDemo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fruitText = "";
+
+        // Loops through the array
+        for (let i = 0; i < fruits.length; i++) {
+            fruitText += fruits[i] + "<br>";
+        }
+
+        // Displays every item
+        document.getElementById("arrayLoopDemo").innerHTML = fruitText;
+    </script>
+
+</body>
+
+</html>

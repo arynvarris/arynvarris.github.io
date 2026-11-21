@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Canvas</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        const NRPTS = 6; // Number of circles or points
+        const NREDGES = 5; // Number of edges
+    </script>
+
+    <script src="js/constants.js"></script>
+    <script src="js/classes.js"></script>
+    <script src="js/graphics.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/helper.js"></script>
+
+    <!-- Allows the use of accordian classes -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>RANDOM PAIRINGS</h1>
+    </header>
+
+    <br>
+
+    <!-- Holds the canvas and right-side menu in a div container -->
+    <div class="container">
+
+        <!-- Menu on right of canvas -->
+        <div class="menu">
+            <h2>Graph Controls</h2>
+
+            <hr>
+            <!-- Accordian, with displaying dropdownv-->
+            <button onclick="accordian('Demo3')" class="w3-btn w3-block w3-red">
+            Accordion</button>
+
+            <div id="Demo3" class="w3-hide w3-container w3-center w3-pale-red">
+            <p>Accordian content</p>
+            </div>
+            
+            <br>
+
+            <button onclick="randomizeGraph(points, edges)">
+                Randomize Point Location
+            </button>
+
+            <br>
+            <br>
+
+            <!-- Helper.js-->
+            <button onclick="circleFormation(points, edges)">
+                Circle Formation
+            </button>
+
+            <br><br>
+
+            <button onclick="displayCoordinates(points, edges)">
+                Display Coordinates
+            </button>
+
+            <div id="coordinates"></div>
+
+            <br> 
+
+            <!-- Uses id, fucntion in dom.js-->
+            <button onclick="numEdgesVertices(points, edges)">
+                Hardcoded Number of Edges and Vertices
+            </button>
+
+            <div id="info"></div>
+
+            <br>
+            
+            <button onclick="exportImage()">
+                Export Image
+            </button>
+
+        </div>
+
+        <!-- Canvas set to left of page  -->
+        <div class="canvas-area">
+
+            <!-- Make sure to add the click attribute to the canvas element to implement it correctly-->
+            <!-- w3schools intro to events tut -->
+            <canvas id="myCanvas" width="800" height="500"
+                ondblclick="addPoint(event)"
+                onclick="onClick()">
+            </canvas>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Gets the canvas
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        // Creates the points and edges
+        var points = new Points(NRPTS);
+        var edges = new Edges(points, NREDGES);
+
+        // Draws the points and edges on the canvas
+        drawEdges(edges);
+        drawPoints(points);
+
+        // Displays the number of points and edges to the canvas
+        displayInfo(points, edges);
+
+        // Event listener that implements the dblclick and click mouse event, using the functions created in helper.js 
+        c.addEventListener("dblclick", addPoint);
+        c.addEventListener("click", onClick);
+
+    </script>
+
+    <footer>
+        <p> Click once on canvas to display circle formation. Double click on canvas to create an additional point. </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image </title>
+</head>
+
+<body>
+
+    <h1>HTML / JS Image Reference</h1>
+
+    <h2>Display an Image</h2>
+
+    <p>
+        Use img and src to display an image on the page.
+    </p>
+
+    <img src="images/cat.jpg" alt="Cat" width="200">
+
+    <h2>Image as a Link</h2>
+
+    <p>
+        Put an image inside an a tag to make the image clickable.
+        href tells the link where to go.
+    </p>
+
+    <a href="https://www.google.com">
+        <img src="images/cat.jpg" alt="Cat" width="200">
+    </a>
+
+    <h2>Download / Export an Image with HTML</h2>
+
+    <p>
+        Use the download attribute to download an image.
+    </p>
+
+    <a href="images/cat.jpg" download>
+        Download Image
+    </a>
+
+    <h2>Export an Image with JavaScript</h2>
+
+    <p>
+        JavaScript can create a link and automatically click it
+        to download an image.
+    </p>
+
+    <button onclick="exportImage()">
+        Export Image
+    </button>
+
+    <script>
+
+        function exportImage() {
+            let link = document.createElement("a");
+
+            link.href = "images/cat.jpg";
+            link.download = "cat.jpg";
+
+            link.click();
+        }
+
+    </script>
+
+</body>
+
+</html>

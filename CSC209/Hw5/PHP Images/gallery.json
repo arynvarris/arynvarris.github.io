@@ -1,0 +1,16 @@
+{
+    "Flowers": [
+        "Flowers/photo1.jpg",
+        "Flowers/photo2.jpg",
+        "Flowers/photo3.jpg",
+        "Flowers/photo4.jpg",
+        "Flowers/photo5.jpg"
+    ],
+    "Trees": [
+        "Trees/tree1.jpg",
+        "Trees/tree2.png",
+        "Trees/tree3.png",
+        "Trees/tree4.jpg",
+        "Trees/tree5.png"
+    ]
+}

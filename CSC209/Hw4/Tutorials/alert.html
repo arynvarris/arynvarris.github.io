@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alert and Console Log </title>
+</head>
+
+<body>
+
+    <h1>Alert and Console Log Reference</h1>
+
+    <h2>alert()</h2>
+
+    <p>
+        alert() shows a popup message to the user.
+    </p>
+
+    <button onclick="showAlert()">
+        Test Alert
+    </button>
+
+    <h2>console.log()</h2>
+
+    <p>
+        console.log() prints information to the browser console. Press Fn+f12 to access.
+        It is useful for testing and debugging. More useful to the programmer than the user.
+    </p>
+
+    <button onclick="showConsole()">
+        Test Console Log
+    </button>
+
+    <script>
+
+        function showAlert() {
+            let name = "Aryn";
+
+            alert("Hello " + name);
+        }
+
+        function showConsole() {
+            let numberOne = 5;
+            let numberTwo = 10;
+
+            let total = numberOne + numberTwo;
+
+            console.log("The total is: " + total);
+        }
+
+    </script>
+
+</body>
+
+</html>

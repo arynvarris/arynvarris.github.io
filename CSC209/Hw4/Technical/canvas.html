@@ -21,9 +21,11 @@
 <body>
 
     <h1>My Canvas</h1>
-    <p><b>Hardcoded graph settings:</b></p>
+    <p><b>Hardcoded Graph Settings:</b></p>
 
     <div id="info"></div>
+
+    <br>
 
     <br>
 
@@ -37,27 +39,28 @@
         Display Coordinates
     </button>
 
-    <br><br>
+    <div class="canvas-area">
+        <canvas id="myCanvas" width="800" height="500"></canvas>
+    </div>
 
     <div id="coordinates"></div>
-    <canvas id="myCanvas" width="800" height="500">
-    </canvas>
 
+    <!-- Main js -->
     <script>
         // Gets the canvas
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
+
         // Creates the points and edges
         var points = new Points(NRPTS);
         var edges = new Edges(points, NREDGES);
 
-        // Draws the points and edges on the canvas
+        // Draws the graph
         drawEdges(edges);
         drawPoints(points);
 
-        // Displays the number of points and edges to the canvas
+        // Displays number of points and edges
         displayInfo(points, edges);
-
     </script>
 
 </body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+</head>
+
+<body>
+
+    <h1>JavaScript HTML Events</h1>
+
+    <h2>The onclick Attribute: </h2>
+
+    <!-- onclick, runs when clicked, displays the date with Date()  -->
+    <ul>
+        <li><P> Uses an id="demo", and displays underneath button once clicked </P></li>
+    </ul>
+    <button onclick="document.getElementById('demo').innerHTML=Date()">What time is it?</button>
+
+    <p id="demo"></p>
+
+    <!-- Uses this.innerHTML instead of an id -->
+    <ul>
+        <li><p> Displays on button once clicked. Uses this.innerHTML instead of using an id. </p></li>
+    </ul>
+    <button onclick="this.innerHTML=Date()">What time is it? </button>
+
+    <br><br>
+
+
+    <h2> Calling a JavaScript Function: </h2>
+
+
+
+</body>
+
+</html>

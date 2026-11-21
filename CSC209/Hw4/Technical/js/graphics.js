@@ -8,7 +8,7 @@ function drawPoint(point) {
     ctx.fillText(point.label, point.x + 5, point.y - 5);
 }
 
-// Draws all points on the canvas
+// Draws points, iterates through points
 function drawPoints(points) {
     for (let i = 0; i < points.array.length; i++) {
         drawPoint(points.array[i]);

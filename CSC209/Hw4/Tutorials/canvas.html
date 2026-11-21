@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+</head>
+
+<body>
+    <h1>Canvas</h1>
+
+    <!-- Creates the canvas -->
+    <canvas id="myCanvas" width="400" height="300"
+        style="border:1px solid black;">
+    </canvas>
+
+    <script>
+        // Finds the canvas
+        const canvas = document.getElementById("myCanvas");
+
+        // Allows JavaScript to draw on the canvas
+        const ctx = canvas.getContext("2d");
+
+        // Line
+        // Starts a new path
+        ctx.beginPath();
+
+        // Starting point
+        ctx.moveTo(0, 0);
+
+        // Ending point
+        ctx.lineTo(200, 100);
+
+        // Draws the line
+        ctx.stroke();
+
+        // Circle
+
+        // Starts a new path
+        ctx.beginPath();
+
+        // Draws a circle
+        ctx.arc(200, 150, 40, 0, 2 * Math.PI);
+
+        // Draws the circle
+        ctx.stroke();
+
+        // Text
+
+        // Sets the font
+        ctx.font = "30px Arial";
+
+        // Draws text
+        ctx.fillText("Hello World", 10, 250);
+    </script>
+
+</body>
+
+</html>
